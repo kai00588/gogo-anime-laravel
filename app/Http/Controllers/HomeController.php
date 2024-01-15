@@ -32,9 +32,9 @@ class HomeController extends Controller
         return view('user.home')->with(compact('animes','page','epi'));
     }
     function episode($slug) {
-        $id = explode('-episode-',$slug)[0];
-        $response = Http::get("https://gogoanime-api-production-6223.up.railway.app/anime-details/$id");
-        $anime = $response->json();
+        $id = explode('-episode-',$slug);
+        $response = Http::get("https://gogoanime-api-production-6223.up.railway.app/anime-details/".$id[0]);
+        $anime = json_decode($response->body());
         $epi = true;
         return view('user.episode')->with(compact('anime','id','slug','epi'));
     }
