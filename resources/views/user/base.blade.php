@@ -13,5 +13,8 @@
             @yield('content')
         </div>
     </div>
+    @env('local')
+        <script src="https://localhost:35279/livereload.js"></script>
+    @endenv
 </body>
 </html>
