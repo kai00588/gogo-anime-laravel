@@ -18,10 +18,10 @@ class Card extends Component
     public function __construct($anime)
     {
         //
-        $this->title = $anime['title'];
-        $this->thumbnail = $anime['thumbnail'];
-        $this->episode = $anime['episode'];
-        $this->type = $anime['type'];
+        $this->title = $anime['animeTitle'];
+        $this->thumbnail = $anime['animeImg'];
+        $this->episode = $anime['episodeNum'];
+        $this->type = $anime['subOrDub'];
     }
 
     /**

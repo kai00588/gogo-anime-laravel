@@ -5,18 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
+use function PHPSTORM_META\type;
+
 class HomeController extends Controller
 {
     //
     function index (Request $request) {
         $page = 1;
+        $type = 1;
         if($request->page) {
-            $response = Http::get("https://anime-api.xyz/page-$request->page");
+            if($request->type){
+                $type = $request->type;
+            }
+            $response = Http::get("https://gogoanime-api-production-6223.up.railway.app/recent-release?page=".$request->page."&type=$type");
             $animes = $response->json();
             $page = $request->page;
         }
         else{
-            $response = Http::get('https://anime-api.xyz/page-1');
+            if($request->type) {
+                $type = $request->type;
+            }
+            $response = Http::get('https://gogoanime-api-production-6223.up.railway.app/recent-release?page-1&type='.$type);
             $animes = $response->json();
         }
         return view('user.home')->with(compact('animes','page'));

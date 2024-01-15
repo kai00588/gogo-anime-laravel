@@ -4,20 +4,14 @@
             Your Logo
         </a>
         <div class="hidden md:flex space-x-4">
-            <a href="" class="text-white hover:text-gray-300">
-                Home
+            <a href="" class="uppercase text-white hover:text-gray-300">
+                Subbed
             </a>
-            <a href="" class="text-white hover:text-gray-300">
-                About
+            <a href="" class="uppercase text-white hover:text-gray-300">
+                Dubbed
             </a>
-            <a href="" class="text-white hover:text-gray-300">
-                Popular
-            </a>
-            <a href="" class="text-white hover:text-gray-300">
-                Complaint
-            </a>
-            <a href="" class="text-white hover:text-gray-300">
-                Api
+            <a href="" class="uppercase text-white hover:text-gray-300">
+                Chinese
             </a>
         </div>
         <!-- Mobile Menu Button -->
@@ -36,14 +30,14 @@
 
     <!-- Mobile Menu -->
     <div class="hidden md:hidden mt-4" id="mobile-menu">
-        <a href="" class="block text-white py-2 px-4 border-b border-gray-300">
-            Home
+        <a href="?type=1" class="uppercase block text-white py-2 px-4 border-b border-gray-300">
+            Subbed
         </a>
-        <a href="" class="block text-white py-2 px-4 border-b border-gray-300">
-            Popular
+        <a href="?type=2" class="uppercase block text-white py-2 px-4 border-b border-gray-300">
+            Dubbed
         </a>
-        <a href="" class="block text-white py-2 px-4 border-b border-gray-300">
-            About
+        <a href="?type=3" class="uppercase block text-white py-2 px-4 border-b border-gray-300">
+            Chinese
         </a>
     </div>
 <script>
