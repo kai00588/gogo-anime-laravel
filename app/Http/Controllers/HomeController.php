@@ -8,9 +8,17 @@ use Illuminate\Support\Facades\Http;
 class HomeController extends Controller
 {
     //
-    function index () {
-        $response = Http::get('https://anime-api.xyz/page-1');
-        $animes = $response->json();
-        return view('user.home')->with(compact('animes'));
+    function index (Request $request) {
+        $page = 1;
+        if($request->page) {
+            $response = Http::get("https://anime-api.xyz/page-$request->page");
+            $animes = $response->json();
+            $page = $request->page;
+        }
+        else{
+            $response = Http::get('https://anime-api.xyz/page-1');
+            $animes = $response->json();
+        }
+        return view('user.home')->with(compact('animes','page'));
     }
 }

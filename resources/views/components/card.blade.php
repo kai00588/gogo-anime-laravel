@@ -1,9 +1,9 @@
-<a href="#" class="flex" id="card">
+<a href="#" class="flex bg-slate-800" id="card">
     <img src="{{$thumbnail}}" alt="{{$title}}" srcset="">
-    <div class="">
-        <h2 class="ml-2 text-sm truncate">{{$title}}</h2>
+    <div class="bg-slate-800">
+        <h2 class="ml-2 text-sm truncate text-white">{{$title}}</h2>
     </div>
-    <div class="" id="overlay">
+    <div class="bg-slate-800" id="overlay">
         <span class="bg-orange-600 mt-1 ml-2 rounded px-1">Episode: {{$episode}}</span>
         <p class="bg-orange-600 mt-2 ml-2 rounded px-1" id="type">{{$type}}</p>
     </div>
@@ -16,6 +16,7 @@
         box-shadow: 0 0 0 0.5 black;
         overflow: hidden;
         border: 1px solid black;
+        margin-bottom: 1rem;
     }
     #card img {
         object-fit: cover;

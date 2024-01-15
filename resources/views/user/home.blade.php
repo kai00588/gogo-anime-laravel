@@ -6,7 +6,7 @@
 
 
 @section('content')
-<div id="recent" class="space-y-4 bg-slate-600">
+<div id="recent" class="bg-slate-600">
     @foreach ($animes as $anime)
         <x-card :anime="$anime"/>
     @endforeach
