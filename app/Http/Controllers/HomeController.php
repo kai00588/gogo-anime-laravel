@@ -30,4 +30,10 @@ class HomeController extends Controller
         }
         return view('user.home')->with(compact('animes','page'));
     }
+    function episode($slug) {
+        $id = explode('-episode-',$slug)[0];
+        $response = Http::get("https://gogoanime-api-production-6223.up.railway.app/anime-details/$id");
+        $anime = $response->json();
+        return view('user.episode')->with(compact('anime','id','slug'));
+    }
 }

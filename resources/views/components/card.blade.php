@@ -1,4 +1,4 @@
-<a href="#" class="flex bg-slate-800" id="card">
+<a href="/anime/{{$epi_id}}" class="flex bg-slate-800" id="card">
     <img src="{{$thumbnail}}" alt="{{$title}}" srcset="">
     <div class="bg-slate-800">
         <h2 class="ml-2 text-sm truncate text-white">{{$title}}</h2>

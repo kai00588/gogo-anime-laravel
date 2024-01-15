@@ -15,6 +15,7 @@ class Card extends Component
     public string $thumbnail;
     public $episode;
     public string $type;
+    public string $epi_id;
     public function __construct($anime)
     {
         //
@@ -22,6 +23,7 @@ class Card extends Component
         $this->thumbnail = $anime['animeImg'];
         $this->episode = $anime['episodeNum'];
         $this->type = $anime['subOrDub'];
+        $this->epi_id = $anime['episodeId'];
     }
 
     /**
