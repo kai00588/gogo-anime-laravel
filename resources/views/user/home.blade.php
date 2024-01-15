@@ -6,9 +6,20 @@
 
 
 @section('content')
-<div id="recent">
+<div id="recent" class="space-y-4 bg-slate-600">
     @foreach ($animes as $anime)
         <x-card :anime="$anime"/>
     @endforeach
 </div>
+@endsection
+@section('style')
+    <style>
+        #recent {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    </style>
 @endsection
