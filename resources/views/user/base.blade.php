@@ -13,7 +13,9 @@
         <div id="container">
             @yield('content')
         </div>
-        <x-paginator :page="$page"/>
+        @if (!$epi)
+            <x-paginator :page="$page"/>
+        @endif
     </div>
 </body>
 </html>
